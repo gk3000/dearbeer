@@ -1,0 +1,324 @@
+html {
+			min-height: 100%;
+		}
+
+		body { 
+			margin: 0px;
+			font-family: 'Open Sans', sans-serif;
+		}
+
+		#page-wrap { 
+			width: 100%; 
+		}
+
+		h1 {
+			font-size: 3em;
+			line-height: 1.2;
+			font-family: 'Zilla Slab', serif;
+		}
+
+		h2 {
+			text-align: center;
+			font-size: 2.5em;
+			line-height: 1;
+			font-family: 'Zilla Slab', serif;	
+		}
+
+		h3, h4, h5, h6 {
+			font-family: 'Zilla Slab', serif;
+		}
+
+		p, ul, h1 { 
+			margin: 0 0 1rem 0; 
+		}
+
+		p.centered {
+			text-align: center;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		.nav {
+			height: 50px;
+			width: 100%;
+			background-color: #000;
+			position: relative;
+		}
+
+		.nav > .nav-header {
+			display: inline;
+		}
+
+		.nav > .nav-header > .nav-title {
+			display: inline-block;
+			font-size: 22px;
+			color: #fff;
+			padding: 10px 10px 10px 10px;
+		}
+
+		.nav > .nav-btn {
+			display: none;
+		}
+
+		.nav > .nav-links {
+			display: inline;
+			float: right;
+			font-size: 18px;
+		}
+
+		.nav > .nav-links > a {
+			display: inline-block;
+			padding: 13px 10px 13px 10px;
+			text-decoration: none;
+			color: #efefef;
+		}
+
+		.nav > .nav-links > a:hover {
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		.nav > #nav-check {
+			display: none;
+		}
+
+		@media (max-width:800px) {
+			.nav > .nav-btn {
+				display: inline-block;
+				position: absolute;
+				right: 0px;
+				top: 0px;
+			}
+			.nav > .nav-btn > label {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				padding: 13px;
+			}
+			.nav > .nav-btn > label:hover {
+				background-color: rgba(0, 0, 0, 0.3);
+			}
+			.nav > .nav-btn > label > span {
+				display: block;
+				width: 25px;
+				height: 10px;
+				border-top: 2px solid #eee;
+			}
+			.nav > .nav-links {
+				position: absolute;
+				display: block;
+				width: 100%;
+				background-color: #333;
+				height: 0px;
+				transition: all 0.3s ease-in;
+				overflow-y: hidden;
+				top: 50px;
+				left: 0px;
+			}
+			.nav > .nav-links > a {
+				display: block;
+				width: 100%;
+			}
+			.nav > #nav-check:not(:checked) + .nav-links {
+				height: 0px;
+			}
+			.nav > #nav-check:checked + .nav-links {
+				height: calc(100vh - 50px);
+				overflow-y: auto;
+			}
+		}
+
+		div#taps {
+			color: antiquewhite;
+			background-image: url("./img/beer_taps.jpg");
+			min-height: 100vh;
+			text-align: center;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			text-align: center;
+			padding-top: 30vh;
+
+		}
+
+		button {
+			background: black;
+			color: antiquewhite;
+			padding: 1em;
+			border-color: antiquewhite;
+			font-size: 1.5em;
+		}
+
+		@media all and (min-width: 800px) {
+			.flex-container {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+
+				display: -webkit-box;
+				display: -moz-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+
+				-webkit-flex-flow: row wrap;
+				justify-content: space-around;
+			}
+
+			.flex-item {
+				padding: 5px;
+				width: 50%;
+				height: auto;
+				margin-top: 10px;
+				color: black;
+				text-align: left;
+			}
+			.flex-item.team {
+				width: 33%;
+
+			}
+		}
+		@media all and (max-width: 799px) {
+			.flex-container {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+
+				display: -webkit-box;
+				display: -moz-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+
+				-webkit-flex-flow: row wrap;
+				justify-content: space-around;
+			}
+
+			.flex-item {
+				padding: 5px;
+				width: 100%;
+				height: auto;
+				margin-top: 10px;
+				color: black;
+				text-align: left;
+			}
+		}
+
+		.google-maps {
+			position: relative;
+			height: 0;
+			overflow: hidden;
+			width: 100%;
+			min-height: 60vh;
+		}
+		.google-maps iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100% !important;
+			height: 100% !important;
+		}
+
+		.gallery { 
+			padding: .5vw;
+			font-size: 0;
+			display: -ms-flexbox;
+			-ms-flex-wrap: wrap;
+			-ms-flex-direction: column;
+			-webkit-flex-flow: row wrap; 
+			flex-flow: row wrap; 
+			display: -webkit-box;
+			display: flex;
+		}
+		.gallery div { 
+			-webkit-box-flex: auto;
+			-ms-flex: auto;
+			flex: auto; 
+			width: 400px; 
+			margin: .5vw; 
+		}
+		.gallery div img { 
+			width: 100%; 
+			height: auto; 
+		}
+		@media screen and (max-width: 400px) {
+			.gallery div { margin: 0; }
+			.gallery { padding: 0; }
+
+		}
+		#glr {
+			background-color: white;
+
+		}
+/*		#glr h2, #glr p {
+			color: white;
+		}*/
+		.section {
+			padding: 1em;
+		}
+
+		footer {
+			background: black;
+			color: white;
+			text-align: center;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			overflow:hidden;
+		}
+		a {
+			color: chocolate;
+		}
+		.flex-item h3 {
+			text-align: center;
+		}
+		#brr img {
+			width: 100%;
+		}
+		#brr .flex-item {
+			padding: 0 10%;
+		}
+.main-nav li {
+	padding: 10px;
+	/*width: 8em;*/
+	float: left;
+	text-align: center;
+	border-right: 1px solid #fff;
+}
+.main-nav {
+	background-color: black;
+	float: right;
+}
+
+.main-nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+.main-nav a:link, .main-nav a:visited {
+	text-decoration: none;
+	color: #fff;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+h1, nav {
+	line-height: 2em;
+	display: inline-block;
+}
+header {
+	background-color: black;
+	color: white;
+}
