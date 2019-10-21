@@ -143,7 +143,9 @@ html {
 			background-repeat: no-repeat;
 			background-size: cover;
 			text-align: center;
-			padding-top: 30vh;
+			display:flex;
+			align-items: center;
+			justify-content: center;
 
 		}
 
